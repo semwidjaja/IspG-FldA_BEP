@@ -1,2 +1,6 @@
 # IspG-FldA_BEP
-BEP Sem Widjaja
+Bachelor End Project, Sem Widjaja
+
+You can find all files needed to recreate my simulations under folder ...
+
+Codes for analysis are under tab ...
