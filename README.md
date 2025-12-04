@@ -1,6 +1,6 @@
 # IspG-FldA_BEP
-Bachelor End Project, Sem Widjaja
+Bachelor End Project:
+Sem Widjaja
+5518245
 
-You can find all files needed to recreate my simulations under folder ...
-
-Codes for analysis are under tab ...
+All the files needed  to reproduce my simulations can be found on this github. If you want specific analysis scripts, send me an email: S.Q.Widjaja@student.tudelft.nl !
