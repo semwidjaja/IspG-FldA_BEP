@@ -1,0 +1,62 @@
+
+source leaprc.protein.ff19SB
+source leaprc.gaff2
+source leaprc.water.opc
+
+loadamberparams frcmod.ionslm_126_opc
+loadamberparams frcmod.ionslm_1264_opc
+
+SF4 = loadmol2 SF4_cluster_2+.mol2
+CDI = loadmol2 CDI.mol2
+FMN = loadmol2 FMN_RED-1_H.mol2
+
+loadamberparams frcmod.IspG_SF4
+loadamberparams frcmod.CDI
+loadamberparams FMN_RED-1_H.frcmod
+
+X = loadpdb substrate_protonated.pdb
+check X
+
+bond X.374.FE1 X.374.S2
+bond X.374.FE1 X.374.S3
+bond X.374.FE1 X.374.S4
+bond X.374.FE2 X.374.S1
+bond X.374.FE2 X.374.S3
+bond X.374.FE2 X.374.S4
+bond X.374.FE3 X.374.S1
+bond X.374.FE3 X.374.S2
+bond X.374.FE3 X.374.S4
+bond X.374.FE4 X.374.S1
+bond X.374.FE4 X.374.S2
+bond X.374.FE4 X.374.S3
+
+bond X.748.FE1 X.748.S2
+bond X.748.FE1 X.748.S3
+bond X.748.FE1 X.748.S4
+bond X.748.FE2 X.748.S1
+bond X.748.FE2 X.748.S3
+bond X.748.FE2 X.748.S4
+bond X.748.FE3 X.748.S1
+bond X.748.FE3 X.748.S2
+bond X.748.FE3 X.748.S4
+bond X.748.FE4 X.748.S1
+bond X.748.FE4 X.748.S2
+bond X.748.FE4 X.748.S3
+
+bond X.644.SG X.374.FE2
+bond X.647.SG X.374.FE1
+bond X.679.SG X.374.FE3
+
+bond X.270.SG X.748.FE2
+bond X.273.SG X.748.FE1
+bond X.305.SG X.748.FE3
+
+solvatebox X OPCBOX 10.0
+
+addions X Na+ 121
+addions X Cl- 82
+
+saveamberparm X substrate_RED.top substrate_RED.crd
+savepdb X substrate_RED.pdb
+
+quit
